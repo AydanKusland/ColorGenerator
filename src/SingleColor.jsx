@@ -4,7 +4,7 @@ import { rgbToHex } from './utils'
 const SingleColor = ({ rgb, weight, type }) => {
 	const [r, g, b] = rgb
 	const copyToClipboard = e => {
-		const color = e.target.lastChild.innerText
+		const color = e.currentTarget.lastChild.innerText
 		navigator.clipboard.writeText(color)
 		toast.success(`${color} copied to clipboard!`)
 	}
